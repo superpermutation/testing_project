@@ -1,9 +1,16 @@
-import {StyleSheet, Text, View, FlatList, TouchableOpacity} from 'react-native'
-import React, {useState} from 'react'
+import {FlatList, TouchableOpacity, RefreshControl} from 'react-native'
+import React from 'react'
 import {UserRow} from './UserRow'
 import {useNavigation} from '@react-navigation/core'
 
-const UserList = ({userInfoList, Header, isChosen, ListEmptyComponent}) => {
+const UserList = ({
+  userInfoList,
+  Header,
+  isChosen,
+  ListEmptyComponent,
+  refreshing,
+  onRefresh,
+}) => {
   const navigation = useNavigation()
   const renderItem = ({item, index}) => (
     <TouchableOpacity
@@ -27,10 +34,16 @@ const UserList = ({userInfoList, Header, isChosen, ListEmptyComponent}) => {
       stickyHeaderIndices={[0]}
       backgroundColor={'white'}
       ListEmptyComponent={ListEmptyComponent}
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+          tintColor={'#6534FF'}
+          colors={'#6534FF'}
+        />
+      }
     />
   )
 }
-
-const styles = StyleSheet.create({})
 
 export {UserList}

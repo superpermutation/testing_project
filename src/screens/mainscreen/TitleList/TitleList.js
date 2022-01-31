@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View, FlatList, SafeAreaView} from 'react-native'
-import React, {useState} from 'react'
+import {StyleSheet, FlatList} from 'react-native'
+import React from 'react'
 import {SelectedButton} from './SelectedButton'
 
 const TitleList = ({DATA, selected, setSelected}) => {

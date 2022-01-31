@@ -1,15 +1,6 @@
 import React from 'react'
-import {StyleSheet, Text, View} from 'react-native'
-import {
-  Placeholder,
-  PlaceholderMedia,
-  PlaceholderLine,
-  Fade,
-  Loader,
-  Progressive,
-  Shine,
-  ShineOverlay,
-} from 'rn-placeholder'
+import {StyleSheet, View} from 'react-native'
+import {Placeholder, PlaceholderLine, Fade} from 'rn-placeholder'
 
 const Skeleton = ({isFirst}) => {
   return (

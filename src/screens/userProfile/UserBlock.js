@@ -1,9 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native'
 import React from 'react'
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context'
+import {useSafeAreaInsets} from 'react-native-safe-area-context'
 
 const userDepartment = {
   ios: 'IOS',

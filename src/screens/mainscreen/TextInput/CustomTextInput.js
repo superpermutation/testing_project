@@ -1,14 +1,6 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  Touchable,
-} from 'react-native'
+import {StyleSheet, View, TextInput, TouchableOpacity} from 'react-native'
 import React, {useState, useRef} from 'react'
-import Loop from '../../assets/loop.svg'
-import Options from '../../assets/options.svg'
+
 import {SearchIcon} from './SearchIcon'
 import {CancelButton} from './CancelButton'
 import Cross from '../../assets/cross.svg'

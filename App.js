@@ -1,24 +1,10 @@
-import {StyleSheet, Text, View, StatusBar, FlatList} from 'react-native'
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context'
-import {useEffect} from 'react'
-import {UserProfile} from './src/screens/userProfile/UserProfile'
-import {UserBlock} from './src/screens/userProfile/UserBlock'
-import {UserInfoRow} from './src/screens/userProfile/UserInfoRow'
-import Phone from './assets/phone.svg'
-import Star from './assets/star.svg'
-import {UserList} from './src/components/UserList'
-import {CustomTextInput} from './src/components/CustomTextInput'
-import {TitleList} from './src/components/TitleList'
-import {LoadScreen} from './src/components/LoadScreen'
-import {getUserInfo} from './src/utils/requests'
-import {MainScreen} from './src/screens/mainscreen/MainScreen'
+import {StatusBar} from 'react-native'
+import {SafeAreaProvider} from 'react-native-safe-area-context'
+
+import {MainScreen, UserProfileScreen} from './src/screens'
 import dayjs from 'dayjs'
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {UserProfileScreen} from './src/screens/userProfile/UserProfileScreen'
 
 import 'dayjs/locale/ru' // import locale
 
@@ -52,23 +38,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={'dark-content'} />
-      {/* <View style={styles.container}>
-        <UserBlock />
-        <View style={[styles.container, {backgroundColor: 'white'}]}>
-          <UserInfoRow Icon={<Phone />} dateOfBirth={'+7 (999) 900 90 90'} />
-          <UserInfoRow
-            Icon={<Star />}
-            dateOfBirth={'5 июня 1996'}
-            age={'24 года'}
-          />
-          <UserList />
 
-          
-
-          <TitleList />
-        </View>
-      </View> */}
-      {/* <LoadScreen /> */}
       <NavigationContainer>
         <Stack.Navigator initialScreen={'Main'}>
           <Stack.Screen
@@ -86,10 +56,3 @@ export default function App() {
     </SafeAreaProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F7F7F8',
-  },
-})

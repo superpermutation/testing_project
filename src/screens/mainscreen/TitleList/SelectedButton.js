@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity, Touchable} from 'react-native'
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import React from 'react'
 
 const SelectedButton = ({isSelected, title, onPress}) => {
@@ -16,10 +16,6 @@ const SelectedButton = ({isSelected, title, onPress}) => {
 }
 
 const styles = StyleSheet.create({
-  button: {
-    // flexDirection: 'row',
-    // justifyContent: 'space-between',
-  },
   containerSelected: {
     paddingHorizontal: 12,
     paddingVertical: 8,

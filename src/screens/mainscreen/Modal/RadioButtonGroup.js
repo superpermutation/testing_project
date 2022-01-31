@@ -1,5 +1,5 @@
 import {RadioButton} from './RadioButton'
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, TouchableOpacity} from 'react-native'
 
 const RadioButtonGroup = ({isChosen, setIsChosen}) => {
   return (
@@ -13,7 +13,5 @@ const RadioButtonGroup = ({isChosen, setIsChosen}) => {
     </View>
   )
 }
-
-const styles = StyleSheet.create({})
 
 export {RadioButtonGroup}
